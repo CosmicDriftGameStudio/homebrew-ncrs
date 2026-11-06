@@ -1,10 +1,10 @@
 cask "ncrs" do
-  version "1.1.1"
+  version "1.2.0"
 
   # Both hashes, because Homebrew picks by the machine it runs on: a cask with
   # only one sha256 fails on the other architecture.
-  sha256 arm:   "aac7f4fe83dc39b4c061b834de780e85bf5d39cf093e44ee597f20f228dffcd2",
-         intel: "5b57c6dca648cba283fa93fdbed1292c9d5045b5cfcfece58407fdd21c96f314"
+  sha256 arm:   "3664d09413f107ed7a4e28489c5480bed325266a09a7b5520bda297f7649daf4",
+         intel: "dbf787414372d0ba249d8173a516aa504ad28444eff2ebabc942d5fe03a677dc"
 
   # Homebrew's vocabulary is arm/intel; the release names the files after the
   # Rust target triple.
@@ -12,7 +12,7 @@ cask "ncrs" do
 
   url "https://github.com/CosmicDriftGameStudio/ncrs/releases/download/v#{version}/ncrs-#{arch}-apple-darwin.app.zip"
   name "ncrs"
-  desc "Dual-panel file manager inspired by Norton Commander"
+  desc "Fast, keyboard-first dual-panel file manager"
   homepage "https://github.com/CosmicDriftGameStudio/ncrs"
 
   livecheck do
