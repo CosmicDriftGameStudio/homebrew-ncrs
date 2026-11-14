@@ -1,10 +1,10 @@
 cask "ncrs" do
-  version "1.4.2"
+  version "1.5.0"
 
   # Both hashes, because Homebrew picks by the machine it runs on: a cask with
   # only one sha256 fails on the other architecture.
-  sha256 arm:   "f703c8d4dbf96800deecb951927da9a1942a6e8a112dd46f1c0636257048c516",
-         intel: "5750765991b44b1f005c76a09ae37338e2bc598520fb338768a9a64d107b4870"
+  sha256 arm:   "db60769e6cacf6bce028fbea818caaac1044d5817a1f12a502d144dffadfa895",
+         intel: "4f7c69e7ad8a80c65ef801019251f609f7a0ead1acfad5291289fe708662975b"
 
   # Homebrew's vocabulary is arm/intel; the release names the files after the
   # Rust target triple.
