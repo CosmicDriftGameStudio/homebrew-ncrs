@@ -1,10 +1,10 @@
 cask "ncrs" do
-  version "1.5.1"
+  version "1.6.0"
 
   # Both hashes, because Homebrew picks by the machine it runs on: a cask with
   # only one sha256 fails on the other architecture.
-  sha256 arm:   "ce372c8cc172357d2d1033beaec436c7de1945bf149a72dda8bcc042db87bcab",
-         intel: "7d12d8d87111715334d18f4602d82fea810cb70c98678eb501e3dc641c87cbff"
+  sha256 arm:   "e3fd0e9cd52163a7f95d534457fc3b897fe005dd480ba1d560d7779df62e0415",
+         intel: "a89f17175b2d50d5bc66b1c7a7b97cc2e0bca86f3e5514018ad6fe5920c83105"
 
   # Homebrew's vocabulary is arm/intel; the release names the files after the
   # Rust target triple.
@@ -25,5 +25,8 @@ cask "ncrs" do
   # terminal and the app in the Dock are the same signed executable.
   binary "#{appdir}/ncrs.app/Contents/MacOS/ncrs"
 
-  # No zap stanza: the app writes no preferences, caches or support files.
+  zap trash: [
+    "~/.config/ncrs",
+    "~/Library/Application Support/ncrs",
+  ]
 end
